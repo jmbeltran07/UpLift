@@ -1,0 +1,61 @@
+.booking {
+	display: flex;
+	flex-direction: column;
+	background-color: #eee;
+	padding: 33px 20px;
+	color: black;
+}
+
+.booking h2,
+.booking h3,
+.booking h4 {
+	font-weight: 600;
+}
+
+.booking h2 {
+	color: gold;
+	margin-top: -5px;
+}
+
+.booking h1,
+.booking h2,
+.booking h3,
+.booking h4,
+.booking h5 {
+	margin: 0;
+}
+
+.booking p {
+	margin-top: -10px;
+	margin-bottom: 0;
+}
+
+.booking h5 span {
+	font-family: 600;
+	font-size: 22px;
+}
+
+.booking h5 {
+	font-size: 12px;
+}
+
+.booking hr {
+	margin-top: 3px;
+	border-color: black;
+}
+
+.booking h4 {
+	font-size: 14px;
+}
+
+.booking div {
+	display: flex;
+	justify-content: space-between;
+	flex-direction: row;
+}
+
+.pay-monthly-estimated-price {
+	display: flex;
+	justify-content: space-between;
+	flex-direction: row;
+}

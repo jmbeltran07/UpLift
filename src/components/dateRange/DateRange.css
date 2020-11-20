@@ -1,0 +1,60 @@
+.dateRange-welcome {
+	text-align: center;
+}
+
+.datePicker {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	margin-left: 80px;
+}
+
+.datePicker > button {
+	margin-top: 32px;
+}
+
+.btn-active,
+.btn-passive {
+	margin: 0;
+	background-color: transparent;
+	color: black;
+	font-size: 16px;
+	border-radius: 6px;
+	margin-right: 10px;
+}
+
+.btn-active:hover,
+.btn-passive:hover {
+	background-color: transparent;
+}
+
+.btn-passive {
+	border-color: #eee;
+	border-width: 1px;
+}
+
+.btn-active {
+	border-color: #00838F;
+	border-width: 2px;
+}
+
+.checkbox-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+}
+
+.checkbox-container > label {
+	color: gold;
+	font-size: 25px;
+	margin-left: 5px;
+	margin-right: 30px;
+	margin-top: -3px;
+}
+
+.checkboxes {
+	display: flex;
+	flex-direction: row;
+	margin-left: 200px;
+	margin-top: 20px;
+}

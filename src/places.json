@@ -1,0 +1,122 @@
+[
+	{
+		"id": 1,
+		"name": "Boston Marriott Quincy",
+		"location": "Quincy, MA, US",
+		"rating": 3,
+		"price": 300,
+		"totalPrice": 0,
+		"room": "Standard Room",
+		"roomExtraCharge": 0
+	},
+	{
+		"id": 2,
+		"name": "The Godfrey Hotel Boston",
+		"location": "Boston, Massachusetts, US",
+		"rating": 4,
+		"price": 512,
+		"totalPrice": 0,
+		"room": "Standard Room",
+		"roomExtraCharge": 0
+	},
+	{
+		"id": 3,
+		"name": "Hyatt Regency Cambridge, Overlooking Boston",
+		"location": "Cambridge, MA, US",
+		"rating": 4,
+		"price": 493,
+		"totalPrice": 0,
+		"room": "Standard Room",
+		"roomExtraCharge": 0
+	},
+	{
+		"id": 4,
+		"name": "Royal Sonesta Boston",
+		"location": "Cambridge, MA, US",
+		"rating": 4,
+		"price": 351,
+		"totalPrice": 0,
+		"room": "Standard Room",
+		"roomExtraCharge": 0
+	},
+	{
+		"id": 5,
+		"name": "Copley Square Hotel",
+		"location": "Boston, MA, US",
+		"rating": 5,
+		"price": 716,
+		"totalPrice": 0,
+		"room": "Standard Room",
+		"roomExtraCharge": 0
+	},
+	{
+		"id": 6,
+		"name": "Boston Marriott Copley Place",
+		"location": "Boston, MA, US",
+		"rating": 3,
+		"price": 222,
+		"totalPrice": 0,
+		"room": "Standard Room",
+		"roomExtraCharge": 0
+	},
+	{
+		"id": 7,
+		"name": "Four Points by Sheraton Wakefield Boston Htl&Conference Cntr",
+		"location": "Wakefield, MA, US",
+		"rating": 2,
+		"price": 115,
+		"totalPrice": 0,
+		"room": "Standard Room",
+		"roomExtraCharge": 0
+	},
+	{
+		"id": 8,
+		"name": "Ames Boston Hotel",
+		"location": "BOSTON, US",
+		"rating": 2,
+		"price": 172,
+		"totalPrice": 0,
+		"room": "Standard Room",
+		"roomExtraCharge": 0
+	},
+	{
+		"id": 9,
+		"name": "Rodeway Inn Logan International Airport",
+		"location": "Revere, US",
+		"rating": 5,
+		"price": 523,
+		"totalPrice": 0,
+		"room": "Standard Room",
+		"roomExtraCharge": 0
+	},
+	{
+		"id": 10,
+		"name": "Boston Marriott Peabody",
+		"location": "Peabody, MA, US",
+		"rating": 5,
+		"price": 602,
+		"totalPrice": 0,
+		"room": "Standard Room",
+		"roomExtraCharge": 0
+	},
+	{
+		"id": 11,
+		"name": "DoubleTree by Hilton Boston North Shore",
+		"location": "Danvers, MA, US",
+		"rating": 4,
+		"price": 544,
+		"totalPrice": 0,
+		"room": "Standard Room",
+		"roomExtraCharge": 0
+	},
+	{
+		"id": 12,
+		"name": "Le Meridien Cambridge-MIT",
+		"location": "Cambridge, MA, US",
+		"rating": 4,
+		"price": 822,
+		"totalPrice": 0,
+		"room": "Standard Room",
+		"roomExtraCharge": 0
+	}
+]

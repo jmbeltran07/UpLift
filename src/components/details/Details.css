@@ -1,0 +1,71 @@
+.details div div div {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	text-align: center;
+}
+
+.details div div div h2 {
+	margin-left: 5px;
+	color: gold;
+	font-size: 40px;
+}
+
+.details div div p {
+	margin-top: -15px;
+	color: #9E9E9E;
+	font-weight: 200;
+	font-size: 12px;
+}
+
+.details div div h5 {
+	margin-top: -10px;
+	color: #616161;
+	font-weight: 400;
+}
+
+.details div div h5 span {
+	font-weight: 600;
+	font-size: 18px;
+}
+
+.details-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.details-container div {
+	top: 0;
+}
+
+.details-container form {
+	top: 0;
+}
+
+.details-container form div label {
+	color: black;
+	font-size: 18px;
+	font-weight: 600;
+}
+
+.details-container form div label span {
+	color: green;
+}
+
+.details-container form div label input[type="radio"] {
+	margin-right: 5px;
+}
+
+.estimated-price {
+	color: #1976D2;
+	margin-left: 17px;
+	cursor: pointer;
+}
+
+.monthly-estimated-price {
+	color: #1976D2;
+	font-size: 18px;
+	cursor: pointer;
+}

@@ -1,0 +1,81 @@
+.checkbox-container-insurance {
+	display: flex;
+	flex-direction: row;
+}
+
+.checkbox-container-insurance label {
+	margin-left: 5px;
+	font-size: 14px;
+	font-weight: 400;
+	color: black;
+}
+
+.checkbox-container-insurance label span {
+	color: green;
+	font-weight: 600;
+}
+
+.payment-col-1 {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.book-btn {
+	margin-left: auto;
+	margin-right: 0;
+}
+
+.payment-col-3 {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.pay-monthly-container,
+.pay-monthly-container-disabled,
+.pay-today-container {
+	padding: 20px;
+	color: #424242;
+	font-size: 16px;
+	width: 100%;
+
+}
+
+.pay-today-container {
+	background-color: #eee;
+}
+
+.pay-monthly-container-disabled {
+	color: gray;
+	background-color: #f4f6f9;
+}
+
+.pay-monthly-container {
+	background-color: #EEF2FF;
+}
+
+
+.pay-monthly-container input,
+.pay-monthly-container-disabled input,
+.pay-today-container input {
+	margin-right: 10px;
+	color: green;
+}
+
+.pay-monthly-approved-sign {
+	background-color: #00C853;
+	padding: 5px 10px;
+	color: white;
+	font-size: 12px;
+	/* text-align: center; */
+	font-weight: 400;
+	border-radius: 5px;
+	margin-left: 10px;
+	margin-top: -15px;
+}
+/*
+.pay-monthly-container {
+	display: flex;
+	flex-direction: row;
+} */

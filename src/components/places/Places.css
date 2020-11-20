@@ -1,0 +1,59 @@
+.place-container {
+	width: 100%;
+	padding: 20px 30px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	margin: 30px 0;
+	background-color: #FAFAFA;
+}
+
+.place-container button {
+	margin-left: auto;
+}
+
+.place-container div {
+	margin-left: 20px;
+}
+
+.place-container div p {
+	color: #9E9E9E;
+	font-weight: 200;
+	font-size: 12px;
+	margin-top: 5;
+	margin-bottom: 0;
+}
+
+.place-container div h1 {
+	margin-top: -5px;
+	margin-bottom: 0;
+}
+
+.place-container div h5 {
+	margin-top: -15px;
+	color: #757575;
+}
+
+.place-container div h3 {
+	margin-bottom: 0;
+}
+
+.place-container div h2 {
+	margin-top: 10px;
+	color: gold;
+}
+
+.monthly-price-estimate {
+	color: #1976D2;
+	font-size: 16px;
+	cursor: pointer;
+}
+
+.monthly-price-estimate span:nth-child(1) {
+	font-size: 12px;
+}
+
+.monthly-price-estimate *:nth-child(3) {
+	font-size: 18px;
+	border-bottom: 1px dotted currentColor;
+}
