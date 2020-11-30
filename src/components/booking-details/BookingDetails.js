@@ -3,6 +3,9 @@ import PropTypes from 'prop-types';
 
 import './BookingDetails.css';
 
+import UpPricing from '../uplift-components/UpPricing'
+import { updateUpNodes } from '../uplift-components/upLiftTools'
+
 class BookingDetails extends Component {
 
 	constructor(props) {
@@ -19,9 +22,11 @@ class BookingDetails extends Component {
         if (prevProps.insuranceTotalCharge !== this.props.insuranceTotalCharge) {
             this.insurance = this.props.insuranceTotalCharge;
             this.totalPrice = this.hotelPrice + this.insurance;
-            this.setState({ update: !this.state.update });
-        }
-    }
+			this.setState({ update: !this.state.update }, () => {
+				updateUpNodes()
+			});
+        } 
+	}
 
 	getFormattedPrice(price) {
 		return '$' + price.toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
@@ -66,7 +71,12 @@ class BookingDetails extends Component {
 				<br />
 				<div>
 					<h3 style={{color: 'black'}}>Total</h3>
-					<h3 style={{color: 'black'}}>{this.getFormattedPrice(this.totalPrice)}</h3>
+					<h3 style={{color: 'black', textAlign: 'right'}}>
+						{this.getFormattedPrice(this.totalPrice)}
+						{!this.props.hideUpNodes && <UpPricing
+							priceValue = {this.totalPrice + '00'}
+						/>}
+					</h3>
 				</div>
 				<br />
 			</div>

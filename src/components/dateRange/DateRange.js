@@ -6,6 +6,8 @@ import './DateRange.css';
 
 import data from '../../places';
 
+import { updateUpNodes } from '../uplift-components/upLiftTools'
+
 class DateRange extends Component {
 
 	constructor(props) {
@@ -20,6 +22,7 @@ class DateRange extends Component {
 
 		this.dateDeparture = this.props.dateDeparture;
 		this.dateReturn = this.props.dateReturn
+		this.numOfTravelers = this.props.numOfTravelers
 	}
 
 	componentWillMount() {
@@ -64,6 +67,9 @@ class DateRange extends Component {
 		this.dateReturn = document.getElementById('returnDate').value;
 
 		this.getPlaces();
+		updateUpNodes({
+			buildTripInfo: this.buildTripInfo.bind(this)
+		})
 	}
 
 	handleSelection(place) {
@@ -74,6 +80,7 @@ class DateRange extends Component {
 
 	handleTraveler(traveler) {
 		this.props.sendNumOfTravelers(traveler);
+		this.numOfTravelers = traveler
 
 		if (traveler === 1) {
 			document.getElementById('btn-1').className = 'btn-active';
@@ -97,6 +104,37 @@ class DateRange extends Component {
 			this.handleCheckBox(0);
 			this.props.sendDateRange(this.dateDeparture, this.dateReturn, this.dateDiff);
 			this.setState({ display: true });
+		}
+	}
+
+	buildTripInfo() {
+		const travelers = []
+		for(let i = 0; i < this.numOfTravelers; i++) {
+			travelers.push({id: i})
+		}
+		return {
+			order_amount: 99900, // always send minor units (integer)
+			travelers: travelers,
+			air_reservations: [
+				{
+					trip_type: 'roundtrip',
+					itinerary: [
+						{
+							departure_apc: '',
+							arrival_apc: '',
+							// departure_time: '20210618'
+							departure_time: this.dateDeparture.replaceAll('-','')
+						},
+						{
+							departure_apc: '',
+							arrival_apc: '',
+							// departure_time: '20210624'
+							departure_time: this.dateReturn.replaceAll('-','')
+						}
+					],
+					insurance: []
+				}
+			]
 		}
 	}
 

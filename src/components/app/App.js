@@ -8,6 +8,8 @@ import DateRange from '../dateRange/DateRange';
 import Payment from '../payment/Payment';
 import Confirmation from '../confirmation/Confirmation';
 
+import initializeUplift from '../uplift-components/upLiftTools'
+
 import './App.css';
 
 class App extends Component {
@@ -56,6 +58,8 @@ class App extends Component {
 		this.confirmationCode = '';
 		this.insurance = [];
 		this.error = [];
+
+		initializeUplift()
 	}
 
 	getDates(dateDeparture, dateReturn, dateDiff) {
