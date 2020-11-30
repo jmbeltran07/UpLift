@@ -4,6 +4,9 @@ import PropTypes from 'prop-types';
 
 import './Details.css';
 
+import UpPricing from '../uplift-components/UpPricing'
+import { updateUpNodes } from '../uplift-components/upLiftTools'
+
 class Details extends Component {
 
 	constructor(props) {
@@ -19,6 +22,31 @@ class Details extends Component {
 			this.props.history.push('/');
 		}
 	}
+	buildTripInfo() {
+		return {
+			order_amount: this.state.priceToDisplay * 100,
+			air_reservations: [
+				{
+					trip_type: 'roundtrip',
+					itinerary: [
+						{
+							departure_apc: '',
+							arrival_apc: '',
+							// departure_time: '20210618'
+							departure_time: this.props.dateDeparture.replaceAll('-','')
+						},
+						{
+							departure_apc: '',
+							arrival_apc: '',
+							// departure_time: '20210624'
+							departure_time: this.props.dateReturn.replaceAll('-','')
+						}
+					],
+					insurance: []
+				}
+			]
+		}
+	}
 
 	componentDidMount() {
 		if (this.props.room.name === 'Standard Room') {
@@ -28,6 +56,9 @@ class Details extends Component {
 		} else {
 			document.getElementById('presidentSuite').checked = true;
 		}
+		updateUpNodes({
+			buildTripInfo: this.buildTripInfo.bind(this)
+		})
 	}
 
 	handleRadioBtn(roomName, roomExtraCharge) {
@@ -42,7 +73,11 @@ class Details extends Component {
 	}
 
 	handlePriceChange(charge) {
-		this.setState({ priceToDisplay: this.props.hotel.totalPrice + charge });
+		this.setState({ priceToDisplay: this.props.hotel.totalPrice + charge }, () => {
+			updateUpNodes({
+				buildTripInfo: this.buildTripInfo.bind(this)
+			})
+		});
 	}
 
 	handleSubmit() {
@@ -83,6 +118,9 @@ class Details extends Component {
 							<span> ${place.price}/night</span>
 						</h5>
 						<h1>{'$' + this.state.priceToDisplay.toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,")} </h1>
+						<UpPricing
+							priceValue = {this.state.priceToDisplay + '00'}
+							/>
 						<button onClick={this.handleSubmit.bind(this)}>Continue</button>
 					</div>
 					<form>

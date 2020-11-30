@@ -3,6 +3,9 @@ import PropTypes from 'prop-types';
 
 import './Places.css';
 
+import UpPricing from '../uplift-components/UpPricing'
+import { updateUpNodes } from '../uplift-components/upLiftTools'
+
 class Places extends Component {
 
 	constructor(props) {
@@ -17,6 +20,10 @@ class Places extends Component {
 
 	getFormattedPrice(price) {
 		return '$' + price.toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
+	}
+
+	componentDidMount() {
+		updateUpNodes()
 	}
 
 	render() {
@@ -42,6 +49,13 @@ class Places extends Component {
 									{place.rating === 5 ? <h2>*****</h2> : ""}
 									<h5>{this.getFormattedPrice(place.price)}/night</h5>
 									<h1>{this.getFormattedPrice(place.totalPrice)}</h1>
+									<UpPricing
+										priceValue = {place.totalPrice + '00'}
+										priceType = 'departure_option'
+										priceModel = 'total'
+										comparisonType = 'preferred_selection'
+										taxesIncluded = 'true'
+										/>
 								</div>
 								<button onClick={() => this.handleClick(place)}>Select</button>
 							</div>
